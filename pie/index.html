@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Carta Pai</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <style>
+  h1 {
+    color: black;
+    font-size: 15pt;
+    text-decoration: underline 1px black;
+    
+      }
+  h2 {
+    font-size: 12pt;
+    
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Jumlah murid mengikut rumah sukan</h1>
+<canvas id="myChart"></canvas>
+
+<div>
+  <h2>Jumlah murid: 36 Orang
+  </h2></div>
+
+
+  <!-- Project -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Jingga', 'Merah', 'Hijau', 'Ungu', 'Kuning', 'Biru'],
+        datasets: [{
+            data: [22, 19, 19, 17, 11, 11],
+            backgroundColor: [
+                '#FFD8B0',
+                '#FFE0E6',
+                '#DBF2F2',
+                '#EBE0FF',
+                '#FFF5DD',
+                '#D7ECFB'
+            ],
+            borderColor: [
+  '#FF8000',
+  '#FF0000',
+  '#00B9CE',
+  '#5A00FF',
+  '#FFB400',
+  '#0081FF'
+
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: false,
+        maintainAspectRatio: false
+    }
+});
+
+</script>
+</body>
+</html>
