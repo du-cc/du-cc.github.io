@@ -1,0 +1,153 @@
+.topbar {
+    height: 56px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 6px;
+    z-index: 999;
+    position: fixed;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: grey;
+    overflow-x: hidden;
+}
+
+.topbar_button {
+    background-color: black;
+    border: 0;
+    margin-top: 5px;
+    margin-left: 13px;
+    opacity: 1;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.5;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+.topbar_ul:not(.topbar_menu_btn) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.topbar_li {
+    float: left;
+}
+
+.topbar_selected {
+    background: linear-gradient(#0099FF, #00478F);
+
+}
+
+
+.intro_sea {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+    margin-top: -10%;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+
+}
+
+.intro_seadiv {
+    width: 150%;
+    height: 100%;
+    position: relative;
+    background-color: #0099FF;
+    margin-bottom: 0;
+    overflow: hidden;
+    
+}
+
+
+.grad_skytogalax {
+    background: linear-gradient(#0099FF, #00478F);
+    margin-top: 0;
+    padding-top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+
+
+.wave1 {
+    position: absolute;
+    animation-name: seawave;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.wave2 {
+    position: absolute;
+    animation-name: seawave2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.wave3 {
+    position: absolute;
+    animation-name: seawave3;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.ducc {
+    top: 0%;
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 20%;
+    transform: rotate(180deg);
+    animation-name: ducc;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+
+
+/* Animations */
+
+@keyframes seawave{
+    from {right: 0px;}
+    to {right: 15%;}
+}
+
+@keyframes seawave2{
+    from {right: 0px;}
+    to {right: 10%;}
+}
+
+@keyframes seawave3{
+    from {right: 0px;}
+    to {right: 20%;}
+}
+
+@keyframes ducc {
+    0% {transform: rotate(180deg);}
+    10% {transform: rotate(200deg); top: 5%;}
+    30% {transform: rotate(250deg); top: 15%;}
+    50% {transform: rotate(270deg); top: 35%;}
+    70% {transform: rotate(290deg); top: 50%;}
+    80% {transform: rotate(340deg); top: 70%;}
+    90% {transform: rotate(360deg); top: 85%;}
+    100% {transform: rotate(400deg); top: 100%;}
+
+}
