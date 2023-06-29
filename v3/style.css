@@ -1,0 +1,97 @@
+@property --x {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --y {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+body {
+    background-color: #141414;
+}
+
+.hovers {
+    width: 50px;
+    height: 50px;
+    background-color: #323232;
+    color: black;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-duration: 0.3s;
+    animation-name: unhover;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+
+}
+
+@keyframes hover {
+    0% {
+        --x: 0%;
+        --y: 0%;
+    }
+
+    25% {
+        --x: 100%;
+        --y: 0%;
+    }
+
+    100% {
+        --x: 100%;
+        --y: 100%;
+    }
+}
+
+@keyframes unhover {
+    0% {
+        --x: 100%;
+        --y: 100%;
+    }
+
+    25% {
+        --x: 100%;
+        --y: 0%;
+    }
+
+    100% {
+        --x: 0%;
+        --y: 0%;
+    }
+}
+
+.hovers:hover {
+    animation-name: hover;
+    animation-fill-mode: forwards;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100vh;
+}
+
+.b1 {
+    background: radial-gradient(circle at var(--x) var(--y), #c2e812 0%, #91f5ad 100%);
+}
+
+.b2 {
+    background: radial-gradient(circle at var(--x) var(--y), #4357AD 0%, #48A9A6 100%);
+}
+
+.b3 {
+    background: radial-gradient(circle at var(--x) var(--y), #8CFF98 0%, #AAD922 100%);
+}
+
+.b4 {
+    background: radial-gradient(circle at var(--x) var(--y), #F97068 0%, #A30000 100%);
+}
