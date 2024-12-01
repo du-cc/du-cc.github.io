@@ -1,0 +1,11 @@
+:root {
+  --main-bg: url("./assets/bgLight.svg");
+  --main-text-color: #000000;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--main-text-color);
+  font-family: "Inter", sans-serif;
+}
+
