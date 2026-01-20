@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://site-assets.fontawesome.com/releases/v7.1.0/css/fontawesome.css");
+
+body {
+  background-color: #020202;
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0 10vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 0 3vw;
+  }
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1em 1.7em;
+  margin-top: 1em;
+
+  border-radius: 10em;
+
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 900px) {
+  .topbar {
+    margin: 0 0;
+    margin-top: 1em;
+  }
+}
+
+.topbar > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.bg {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+
+  width: 90%;
+
+  z-index: -1;
+
+  filter: blur(0.7em);
+  mask-image: radial-gradient(circle, black 30%, transparent 80%);
+}
+
+.main-c {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .main-c {
+    align-items: center;
+  }
+}
+
+.category-c {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+@media screen and (max-width: 900px) {
+  .category-c {
+    align-items: center;
+  }
+}
+
+.category-c > span {
+  color: color-mix(in srgb, #fff 100%, #000 30%);
+  font-size: 1em;
+}
+
+.pill-c {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .pill-c {
+    justify-content: center;
+  }
+}
+
+.pill {
+  width: fit-content;
+
+  padding: 0.7em 1em;
+  border-radius: 10em;
+
+  background-color: color-mix(in srgb, var(--color) 10%, transparent 90%);
+
+  border: 1px solid color-mix(in srgb, var(--color) 50%, #000 20%);
+
+  color: var(--color);
+  font-size: 1.2em;
+}
+
+.card-c {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content(1fr);
+  gap: 1em;
+
+  max-width: 90vw;
+}
+
+@media screen and (max-width: 900px) {
+  .card-c {
+    grid-auto-flow: row !important;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1.5em 1.7em;
+  border-radius: 1em;
+
+  background-color: color-mix(in srgb, var(--color) 3%, transparent 97%);
+
+  border: 1px solid color-mix(in srgb, var(--color) 30%, #000 20%);
+
+  font-size: 1.2em;
+
+  cursor: pointer;
+
+  transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    justify-content: space-between;
+  }
+}
+
+.card[data-project-id]:not(.card.more)::after {
+  content: "";
+  font-family: "Font Awesome 7 Pro", sans-serif;
+  align-self: center;
+
+  margin-left: 1.3em;
+  max-width: 1.5em;
+
+  opacity: 0;
+
+  transform: translateX(-10px);
+
+  transition: all 0.3s ease;
+
+  text-align: right;
+}
+
+.card[data-project-id]:not(.card.more):hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card[data-project-id]:hover {
+  background-color: color-mix(in srgb, var(--color) 5%, transparent 95%);
+  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--color) 15%, transparent 95%);
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card > div > span {
+  font-size: 0.9em;
+  color: color-mix(in srgb, var(--color) 100%, #000 40%);
+}
+
+.card > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.card > div > div > h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.card > div > div > span {
+  font-size: 0.95em;
+  color: color-mix(in srgb, #fff 100%, #000 30%);
+}
+
+.card.more {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card > .more {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 900px) {
+  .card > .more {
+    flex-direction: row;
+  }
+}
