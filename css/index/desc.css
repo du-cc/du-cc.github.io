@@ -119,7 +119,7 @@
 
 .card[data-project-id]:not(.card.more)::after {
   content: "";
-  font-family: "Font Awesome 7 Pro", sans-serif;
+  font-family: "Font Awesome 7 Pro";
   align-self: center;
 
   margin-left: 1.3em;
