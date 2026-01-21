@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://site-assets.fontawesome.com/releases/v7.1.0/css/fontawesome.css");
+
+@view-transition {
+  navigation: auto;
+}
+
+body {
+  background-color: #020202;
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+
+  height: 100dvh;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 0 3vw;
+    align-items: stretch;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 1em 0;
+
+  width: 100%;
+
+  border-radius: 10em;
+
+  font-size: 1.3em;
+}
+
+.topbar > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+

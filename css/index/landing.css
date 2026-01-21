@@ -1,0 +1,97 @@
+.menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.3em;
+
+  margin: 5vh 0;
+  padding-bottom: 2em;
+
+  max-width: 90vw;
+  height: 100%;
+  min-height: 0;
+
+  flex: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    margin: 0;
+    grid-auto-flow: row;
+    width: 100%;
+    grid-auto-rows: 1fr;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 0;
+
+  border: 1px solid color-mix(in srgb, #fff 10%, transparent 90%);
+  border-radius: 0.3em;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition-duration: 0.3s;
+}
+
+.card:hover {
+  /* background-color: color-mix(in srgb, var(--color) 5%, transparent 95%); */
+  box-shadow: 0 0 10px 2px color-mix(in srgb, #fff 15%, transparent 95%);
+}
+
+.card > img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: blur(0.5em);
+
+  transition-duration: 0.7s;
+}
+
+.card > img {
+  object-position: var(--pos);
+}
+
+.card:hover > img {
+  transform: scale(1.1);
+  filter: blur(0.2em);
+}
+
+.card > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  box-sizing: border-box;
+
+  font-size: 3em;
+  font-weight: 100;
+
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+
+  transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 900px) {
+  .card > h1 {
+    writing-mode: horizontal-tb;
+  }
+}
+
+.card:hover > h1 {
+  letter-spacing: 0.5em;
+  font-size: 3em;
+  font-weight: 200;
+}
+
