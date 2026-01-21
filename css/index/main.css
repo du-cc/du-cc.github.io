@@ -14,6 +14,7 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  text-size-adjust: none;
 
   margin: 0;
   padding: 0 2vw;
