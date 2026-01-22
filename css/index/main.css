@@ -2,7 +2,6 @@
 @import url("https://site-assets.fontawesome.com/releases/v7.1.0/css/fontawesome.css");
 @import url("https://site-assets.fontawesome.com/releases/v7.1.0/css/solid.css");
 
-
 @view-transition {
   navigation: auto;
 }
@@ -32,6 +31,8 @@ body {
   body {
     padding: 0 3vw;
     align-items: stretch;
+    height: auto;
+    min-height: 100dvh;
   }
 }
 
@@ -72,3 +73,18 @@ a {
   gap: 1em;
 }
 
+.topbar > div > a {
+  transition-duration: 0.3s;
+}
+
+.topbar > div > a:hover {
+  color: color-mix(in srgb, #fff 70%, #000 30%);
+}
+
+.topbar > div > a > i {
+  transition-duration: 0.3s;
+}
+
+.topbar > div > a > i:hover {
+  transform: translateX(-3px);
+}

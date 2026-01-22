@@ -6,12 +6,16 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
 
-  width: 90%;
+  width: 80dvw;
 
   z-index: -1;
 
   filter: blur(0.7em);
-  mask-image: radial-gradient(circle, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle, black 80%, transparent 90%);
+}
+
+body {
+  background: radial-gradient(circle at top, color-mix(in srgb, var(--color) 30%, #000 70%) 0%, #020202 100%);
 }
 
 .main-c {
@@ -125,7 +129,7 @@
   margin-left: 1.3em;
   max-width: 1.5em;
 
-  opacity: 0;
+  /* opacity: 0; */
 
   transform: translateX(-10px);
 
