@@ -2,6 +2,10 @@ body {
   overflow: hidden !important;
 }
 
+#body {
+  align-items: flex-start !important;
+}
+
 .menu {
   display: flex;
   flex-direction: column;

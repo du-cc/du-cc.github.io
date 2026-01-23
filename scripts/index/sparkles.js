@@ -33,12 +33,12 @@ function animate(el) {
   var x = gsap.getProperty(el, "x");
   var y = gsap.getProperty(el, "y");
   var pos1 = [
-    x + gsap.utils.random(-200, 200),
-    y + gsap.utils.random(-200, 200),
+    x + gsap.utils.random(-50, 50),
+    y + gsap.utils.random(-50, 50),
   ];
   var pos2 = [
-    x + gsap.utils.random(-200, 200),
-    y + gsap.utils.random(-200, 200),
+    x + gsap.utils.random(-50, 50),
+    y + gsap.utils.random(-50, 50),
   ];
 
   el.swimming = gsap.to(el, {
@@ -50,7 +50,7 @@ function animate(el) {
       curviness: 1.5,
       autoRotate: false,
     },
-    duration: gsap.utils.random(10, 15),
+    duration: gsap.utils.random(15, 20),
     ease: "sine.inOut",
     onComplete: () => animate(el),
   });
