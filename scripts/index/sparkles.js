@@ -50,7 +50,7 @@ function animate(el) {
       curviness: 1.5,
       autoRotate: false,
     },
-    duration: gsap.utils.random(6, 12),
+    duration: gsap.utils.random(10, 15),
     ease: "sine.inOut",
     onComplete: () => animate(el),
   });
