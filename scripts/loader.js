@@ -12,5 +12,5 @@ fetch("/elements/topbar.html")
       topbar.querySelector("i").style.display = "none";
     }
 
-    document.body.prepend(topbar);
+    document.getElementById("body").prepend(topbar);
   });

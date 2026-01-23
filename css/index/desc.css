@@ -1,4 +1,4 @@
-.bg {
+/* .bg {
   display: block;
   position: fixed;
   top: 50%;
@@ -12,7 +12,7 @@
 
   filter: blur(0.7em);
   mask-image: radial-gradient(circle, black 80%, transparent 90%);
-}
+} */
 
 body {
   background: radial-gradient(circle at top, color-mix(in srgb, var(--color) 30%, #000 70%) 0%, #020202 100%);
@@ -21,11 +21,15 @@ body {
 .main-c {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2em;
 
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 2vw;
+
+  flex: 1;
+  height: 100%;
 }
 
 @media screen and (max-width: 900px) {
